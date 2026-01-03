@@ -1,0 +1,96 @@
+defaults nosave
+
+
+# version
+# Betaflight / STM32G47X (G473) 2025.12.1 Dec 25 2025 / 22:37:04 (85d201376) MSP API: 1.47
+# config rev: 46f5576
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name BETAFPVG473
+manufacturer_id BEFH
+mcu_id 002b001a3443500420393652
+signature 
+
+# feature
+feature TELEMETRY
+feature OSD
+
+# beacon
+beacon RX_SET
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 2 1300 1700 0 0
+aux 2 2 2 1700 2100 0 0
+aux 3 13 1 1700 2100 0 0
+
+# master
+set dyn_notch_min_hz = 125
+set dyn_notch_max_hz = 850
+set acc_calibration = -19,-16,13,1
+set min_check = 1005
+set max_check = 1995
+set rssi_channel = 16
+set rc_smoothing_auto_factor = 90
+set rc_smoothing_auto_factor_throttle = 50
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set deadband = 3
+set pid_process_denom = 2
+set osd_rssi_dbm_alarm = -98
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set yaw_lowpass_hz = 0
+set p_pitch = 70
+set i_pitch = 126
+set d_pitch = 45
+set f_pitch = 187
+set p_roll = 67
+set i_roll = 120
+set d_roll = 40
+set f_roll = 180
+set p_yaw = 67
+set i_yaw = 120
+set f_yaw = 180
+set d_max_pitch = 45
+set feedforward_jitter_factor = 12
+set dyn_idle_min_rpm = 35
+set simplified_master_multiplier = 150
+set simplified_d_gain = 90
+set simplified_d_max_gain = 0
+set simplified_dterm_filter_multiplier = 120
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
