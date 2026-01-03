@@ -34,10 +34,26 @@ beeper -GPS_STATUS
 beeper -READY_BEEP
 
 # led
-led 0 0,0::A:0
-led 1 0,1::A:0
-led 2 1,0::A:0
-led 3 1,1::A:0
+led 0 15,0::AIW:10
+led 1 14,1::AIW:10
+led 2 13,2::AIW:10
+led 3 12,3::AIW:10
+led 4 0,0::AIW:10
+led 5 1,1::AIW:10
+led 6 2,2::AIW:10
+led 7 3,3::AIW:10
+led 8 3,12::AIW:10
+led 9 2,13::AIW:10
+led 10 1,14::AIW:10
+led 11 0,15::AIW:10
+led 12 12,12::AIW:10
+led 13 13,13::AIW:10
+led 14 14,14::AIW:10
+led 15 15,15::AIW:10
+led 16 10,11::AIW:10
+led 17 10,9::AIW:10
+led 18 5,11::AIW:10
+led 19 5,9::AIW:10
 
 # aux
 aux 0 0 0 1700 2100 0 0
@@ -133,6 +149,7 @@ set dterm_lpf1_static_hz = 120
 set dterm_lpf2_static_hz = 0
 set vbat_sag_compensation = 100
 set anti_gravity_gain = 120
+set crash_recovery = ON
 set p_pitch = 62
 set i_pitch = 94
 set d_pitch = 43
@@ -144,6 +161,7 @@ set f_roll = 105
 set p_yaw = 51
 set i_yaw = 78
 set f_yaw = 105
+set horizon_level_strength = 50
 set d_max_roll = 33
 set d_max_pitch = 43
 set thrust_linear = 40
